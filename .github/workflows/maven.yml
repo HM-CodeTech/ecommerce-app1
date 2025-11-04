@@ -12,7 +12,7 @@ env:
   IMAGE_NAME: ${{ github.actor }}/ecommerce:$IMAGE_TAG
   ECR_REPOSITORY: ${{ vars.AWS_ECR_REPO }}
   AWS_ECR_REGISTRY: ${{ vars.AWS_ECR_REGISTRY }}
-  GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  GH_TOKEN: ${{ secrets.GH_TOKEN }}
 
 jobs:
   project-build:
