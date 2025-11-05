@@ -180,6 +180,8 @@ jobs:
           IMAGE_TAG: ${{ github.run_number }}
           CONTAINER_NAME: ecommerce
           APP_PORT: ${{ vars.APP_PORT }}
+          DOCKERHUB_USERNAME: ${{ secrets.DOCKERHUB_USERNAME }}
+          DOCKERHUB_TOKEN: ${{ secrets.DOCKERHUB_TOKEN }}
           SPRING_DATASOURCE_URL: ${{ secrets.SPRING_DATASOURCE_URL }}
           SPRING_DATASOURCE_USERNAME: ${{ secrets.SPRING_DATASOURCE_USERNAME }}
           SPRING_DATASOURCE_PASSWORD: ${{ secrets.SPRING_DATASOURCE_PASSWORD }}
@@ -191,6 +193,8 @@ jobs:
           echo SPRING_ACTIVE_PROFILE=github >> .env
           echo APP_NAME=ecommerce >> .env
           echo APP_PORT=$APP_PORT >> .env
+          echo DOCKERHUB_TOKEN: ${{ secrets.DOCKERHUB_TOKEN }} >> .env
+          echo DOCKERHUB_USERNAME: ${{ secrets.DOCKERHUB_USERNAME }} >> .env
           echo SPRING_DATASOURCE_URL=$SPRING_DATASOURCE_URL >> .env
           echo SPRING_DATASOURCE_USERNAME=$SPRING_DATASOURCE_USERNAME >> .env
           echo SPRING_DATASOURCE_PASSWORD=$SPRING_DATASOURCE_PASSWORD >> .env
@@ -212,6 +216,8 @@ jobs:
           SERVER_USERNAME: ${{ secrets.SERVER_USERNAME }}
           IMAGE_TAG: ${{ github.run_number }}
           CONTAINER_NAME: ecommerce
+          DOCKERHUB_USERNAME: ${{ secrets.DOCKERHUB_USERNAME }}
+          DOCKERHUB_TOKEN: ${{ secrets.DOCKERHUB_TOKEN }}
           SPRING_DATASOURCE_URL: ${{ secrets.SPRING_DATASOURCE_URL }}
           SPRING_DATASOURCE_USERNAME: ${{ secrets.SPRING_DATASOURCE_USERNAME }}
           SPRING_DATASOURCE_PASSWORD: ${{ secrets.SPRING_DATASOURCE_PASSWORD }}
